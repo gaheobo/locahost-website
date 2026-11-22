@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LocaHost - tìm nơi lưu trú phù hợp cho chuyến đi tiếp theo của bạn.">
+  <title>LocaHost — Find your stay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#home"><span>lo</span><i></i>caHost</a>
+  <nav><a href="#home">Home</a><a href="#stays">Stays</a><a href="#about">About us</a></nav>
+  <div class="header-right"><a href="#host" id="hostLink">Become a host</a><button class="avatar" id="accountBtn" aria-label="Tài khoản">♙</button></div>
+</header>
+
+<main>
+<section id="home" class="page active">
+  <section class="hero">
+    <div class="hero-copy"><span class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</span>
+      <h1>Find a <em>host</em> for every journey</h1>
+      <p>Discover the best local homes, cabins and unique places to stay around the world.</p>
+    </div>
+    <form class="search-box" id="searchForm">
+      <label><small>LOCATION</small><input id="location" placeholder="Where are you going?"></label>
+      <label><small>CHECK IN</small><input type="date" id="checkin"></label>
+      <label><small>CHECK OUT</small><input type="date" id="checkout"></label>
+      <label><small>GUESTS</small><select id="guests"><option>1 guest</option><option selected>2 guests</option><option>3 guests</option><option>4 guests</option><option>5+ guests</option></select></label>
+      <button class="primary search-button">⌕ &nbsp;Search</button>
+    </form>
+    <p class="hero-foot"><b></b> Over 2,000 unique places to discover</p>
+  </section>
+
+  <section class="content" id="stays">
+    <div class="section-title"><div><span class="eyebrow">EXPLORE THE WORLD</span><h2>Stays nearby</h2><p>Find your perfect place to stay in popular destinations.</p></div><a class="view-all" href="#stays">View all stays&nbsp; →</a></div>
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="All">All stays</button>
+      <button class="filter" data-filter="Cabin">Cabins</button>
+      <button class="filter" data-filter="Apartment">Apartments</button>
+      <button class="filter" data-filter="House">Houses</button>
+      <button class="filter" data-filter="Villa">Villas</button>
+    </div>
+    <div class="grid" id="listingGrid"></div>
+    <div class="center"><button class="outline" id="showMore">Show more</button></div>
+  </section>
+  <section class="promo"><div><span class="eyebrow">TRAVEL DIFFERENTLY</span><h2>Make room for<br>new memories.</h2><p>Find a place that feels like yours, wherever you go.</p><a class="light-button" href="#stays">Explore stays</a></div><div class="promo-photo"></div></section>
+</section>
+
+<section id="details" class="page detail content"><div id="detailContent"></div></section>
+
+<section id="auth" class="page auth">
+  <div class="auth-photo"></div>
+  <div class="auth-side"><form id="authForm" class="auth-card">
+    <a class="logo" href="#home"><span>lo</span><i></i>caHost</a>
+    <h2 id="authTitle">Create Account</h2><p id="authDesc">Sign up to discover your next stay.</p>
+    <label>Email address<input type="email" id="email" placeholder="Enter your email" required></label>
+    <label>Password<input type="password" id="password" placeholder="Enter your password" minlength="6" required></label>
+    <label id="confirmLabel">Confirm password<input type="password" id="confirm" placeholder="Confirm your password"></label>
+    <button class="primary full" id="authSubmit">Sign up</button>
+    <div class="or"><span>or sign up with</span></div>
+    <div class="social"><button type="button" data-social="Google">G&nbsp; Google</button><button type="button" data-social="Facebook">f&nbsp; Facebook</button><button type="button" data-social="Apple">●&nbsp; Apple</button></div>
+    <p class="switch" id="authSwitch">Already have an account? <a href="#signin">Sign in</a></p><p id="authMessage" class="message"></p>
+  </form></div>
+</section>
+
+<section id="about" class="page content about"><span class="eyebrow">ABOUT LOCAHOST</span><h2>Feel at home, anywhere.</h2><p>LocaHost helps travelers discover welcoming homes and memorable places to stay. Browse inspiring spaces, compare details and save your favorites for your next journey.</p><a class="primary" href="#stays">Explore stays</a></section>
+</main>
+
+<footer class="footer">
+  <div class="footer-top"><a class="logo" href="#home"><span>lo</span><i></i>caHost</a><p>Find a place that feels like home.</p></div>
+  <div class="footer-columns"><div><b>Support</b><a href="#about">Help Center</a><a href="#about">Safety information</a><a href="#about">Cancellation options</a></div><div><b>Hosting</b><a href="#host">Try hosting</a><a href="#about">Host resources</a><a href="#about">Community forum</a></div><div><b>LocaHost</b><a href="#about">About us</a><a href="#about">Careers</a><a href="#about">Contact</a></div></div>
+  <div class="footer-bottom"><span>© 2025 LocaHost. All rights reserved.</span><span>Privacy · Terms · Sitemap</span></div>
+</footer>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body></html>
